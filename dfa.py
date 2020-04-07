@@ -6,8 +6,10 @@
 """
 
 
-transitions = { 's0': {'DIGIT':'s0','DOT':'s1'},
-                's1': {'DIGIT':'s1'}
+transitions = { 's0': {'DIGIT':'s1','DOT':'s2'},
+                's1': {'DIGIT':'s1','DOT':'s3'},
+                's2':{'DIGIT':'s3'},
+                's3':{'DIGIT':'s3'}
 
 
 
@@ -19,7 +21,7 @@ transitions = { 's0': {'DIGIT':'s0','DOT':'s1'},
      	      }
 
 
-accepts = {'s1':'FLOAT_TOKEN'
+accepts = {'s3':'FLOAT_TOKEN'
 
 	# (Β) Συμπληρώστε το λεξικό των καταστάσεων αποδοχής και των
 	# αντίστοιχων επιστρεφόμενων συμβόλων (tokens)
